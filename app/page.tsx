@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -52,9 +53,11 @@ export default function Home() {
 
                 {/* Ecrã Real do Telemóvel */}
                 <div className="w-full h-auto rounded-[2.2rem] overflow-hidden relative bg-black flex items-center justify-center">
-                  <img 
+                  <Image 
                     src="/img/dashboard-ecra.png" 
                     alt="Ecrã real do aplicativo Lumina" 
+                    width={320}
+                    height={650}
                     className="w-full h-auto object-cover relative z-10"
                   />
                 </div>
@@ -161,7 +164,7 @@ export default function Home() {
       <footer className="w-full py-stack-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-container-low border-t border-border/30">
         <div className="flex flex-col items-center md:items-start gap-2">
           <div className="flex items-center gap-2">
-            <img src="/img/logo.png" alt="Lumina Logo" className="h-10 w-auto" />
+            <Image src="/img/logo.png" alt="Lumina Logo" width={160} height={40} className="h-10 w-auto" />
           </div>
           <p className="font-caption text-caption text-on-surface-variant">Desenvolvido com carinho pela TaketWare</p>
         </div>
