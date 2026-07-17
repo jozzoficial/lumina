@@ -142,7 +142,7 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-white font-bold">1</div>
                   <div>
                     <h4 className="text-white font-h3 text-h3">Descarrega o Ficheiro</h4>
-                    <p className="text-outline-variant">Clica no botão de download. O ficheiro APK será guardado na pasta de 'Transferências' do teu telemóvel.</p>
+                    <p className="text-outline-variant">Clica no botão de download. O ficheiro APK será guardado na pasta de <strong>Transferências</strong> do teu telemóvel.</p>
                   </div>
                 </div>
                 <div className="flex gap-6 items-start">
