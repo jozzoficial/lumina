@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "../public/img/logo.png";
 
 interface HeaderProps {
   apkUrl: string;
@@ -34,7 +35,7 @@ export default function Header({ apkUrl, webUrl }: HeaderProps) {
     <header ref={headerRef} className="docked full-width top-0 sticky z-50 bg-surface/80 glass-header border-b border-border/50 shadow-sm">
       <nav className="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/img/logo.png" alt="Lumina Logo" width={160} height={40} className="h-10 w-auto" />
+          <Image src={logoImg} alt="Lumina Logo" className="h-10 w-auto" />
         </Link>
         <div className="hidden md:flex items-center gap-8">
           <Link className="text-primary font-bold border-b-2 border-primary font-body-md py-1" href="#sobre">Sobre o App</Link>
