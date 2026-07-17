@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <Header apkUrl={apkUrl} />
+      <Header apkUrl={apkUrl} webUrl={webUrl} />
       <main>
         {/* Hero Section */}
         <section className="relative pt-section-v pb-section-v px-gutter max-w-container-max mx-auto">
@@ -38,48 +38,25 @@ export default function Home() {
             <div className="relative flex justify-center items-center">
               {/* Subtle Glow */}
               <div className="absolute w-[400px] h-[400px] bg-primary/10 rounded-full blur-[80px] -z-10"></div>
-              <div className="relative w-full max-w-[320px] aspect-[9/19.5] bg-on-background rounded-[3rem] p-3 shadow-2xl border-4 border-slate-200">
-                {/* Screen Content Simulation */}
-                <div className="w-full h-full bg-surface-container-low rounded-[2.5rem] overflow-hidden relative border border-slate-100">
-                  <div className="p-6 space-y-6">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <p className="text-caption text-text-secondary">Bom dia,</p>
-                        <p className="font-h3 text-primary">Olá, Maria!</p>
-                      </div>
-                      <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-200">
-                        <img 
-                          className="w-full h-full object-cover" 
-                          alt="A profile portrait of a smiling young Angolan woman" 
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-qy_DAp9mBSBAyza5Y5ErIrhS33sVFUHHRGAx9jw1QQYZqxHFAFV08c8yeqzouAvZoa6HSxH69tUjjedZkuK3ECcXDfiG_NwCMhF10IHdHtyqnlP65ecvEdDZijZbL7NIWZZyGbvswjOj0BruGph_TnqALeJXZrjDe06OHBt_Yc7180FnNVtPFPw5BWEKxtOKJ5dix17K12B8Q8jtbRjhptSVyJC-8I1o56pNsaAswPlP_CE0c58zF3YKBng8sB7xyctostcc5pQ" 
-                        />
-                      </div>
-                    </div>
-                    <div className="bg-surface p-6 rounded-3xl shadow-sm space-y-4 border border-border/50">
-                      <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center text-primary">
-                          <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>child_care</span>
-                        </div>
-                        <div>
-                          <p className="font-bold text-h3">24ª Semana</p>
-                          <p className="text-caption text-text-secondary">Tamanho de um Melão</p>
-                        </div>
-                      </div>
-                      <div className="w-full bg-surface-container rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full w-[60%]"></div>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-2xl border border-border/50 text-center">
-                        <span className="material-symbols-outlined text-secondary block mb-1">calendar_month</span>
-                        <p className="text-caption font-bold">Consultas</p>
-                      </div>
-                      <div className="bg-white p-4 rounded-2xl border border-border/50 text-center">
-                        <span className="material-symbols-outlined text-tertiary block mb-1">monitor_heart</span>
-                        <p className="text-caption font-bold">Sintomas</p>
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative mx-auto w-full max-w-[320px] bg-gray-900 border-[12px] border-gray-900 rounded-[3rem] shadow-2xl">
+                {/* Câmara frontal (Punch Hole) realista para Android */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-black rounded-full border border-gray-800/50 z-20 shadow-[inset_0_-2px_4px_rgba(255,255,255,0.1)]"></div>
+                
+                {/* Altifalante superior minúsculo */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gray-800 rounded-b-lg z-20"></div>
+                
+                {/* Botões Físicos Laterais (Volume e Power) */}
+                <div className="absolute -left-[14px] top-[100px] w-[3px] h-[40px] bg-gray-800 rounded-l-md"></div>
+                <div className="absolute -left-[14px] top-[150px] w-[3px] h-[40px] bg-gray-800 rounded-l-md"></div>
+                <div className="absolute -right-[14px] top-[130px] w-[3px] h-[50px] bg-gray-800 rounded-r-md"></div>
+
+                {/* Ecrã Real do Telemóvel */}
+                <div className="w-full h-auto rounded-[2.2rem] overflow-hidden relative bg-black flex items-center justify-center">
+                  <img 
+                    src="/img/dashboard-ecra.png" 
+                    alt="Ecrã real do aplicativo Lumina" 
+                    className="w-full h-auto object-cover relative z-10"
+                  />
                 </div>
               </div>
             </div>
@@ -87,7 +64,7 @@ export default function Home() {
         </section>
 
         {/* Features Bento Grid */}
-        <section className="py-section-v px-gutter bg-surface-container-low">
+        <section id="sobre" className="py-section-v px-gutter bg-surface-container-low">
           <div className="max-w-container-max mx-auto">
             <div className="text-center mb-stack-lg space-y-2">
               <h2 className="font-h2 text-h2 text-text-primary">Por que escolher o Lumina?</h2>
@@ -123,7 +100,7 @@ export default function Home() {
         </section>
 
         {/* Installation Guide */}
-        <section className="py-section-v px-gutter">
+        <section id="como-instalar" className="py-section-v px-gutter">
           <div className="max-w-container-max mx-auto bg-inverse-surface rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
             <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
             <div className="relative z-10 grid lg:grid-cols-5 gap-stack-lg items-center">
@@ -165,16 +142,16 @@ export default function Home() {
         </section>
 
         {/* Community Teaser */}
-        <section className="py-section-v px-gutter max-w-container-max mx-auto text-center">
+        <section id="comunidade" className="py-section-v px-gutter max-w-container-max mx-auto text-center">
           <div className="bg-surface-container rounded-3xl p-12 space-y-6">
             <span className="material-symbols-outlined text-primary text-5xl">diversity_1</span>
             <h2 className="font-h2 text-h2">Mais do que um App, uma Comunidade</h2>
             <p className="text-text-secondary text-body-lg max-w-2xl mx-auto">Junta-te a milhares de outras mães angolanas no nosso grupo exclusivo para partilhar experiências e conselhos.</p>
             <div className="flex justify-center pt-4">
-              <Link className="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+              <a className="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href={webUrl}>
                 Ir para a Comunidade Lumina
                 <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -183,24 +160,23 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-stack-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-container-low border-t border-border/30">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <div className="font-h3 text-h3 text-primary font-bold flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-            Lumina
+          <div className="flex items-center gap-2">
+            <img src="/img/logo.png" alt="Lumina Logo" className="h-10 w-auto" />
           </div>
           <p className="font-caption text-caption text-on-surface-variant">Desenvolvido com carinho pela TaketWare</p>
         </div>
         <div className="flex gap-6">
-          <Link className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href="#">WhatsApp Suporte</Link>
-          <Link className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href="#">Termos de Uso</Link>
-          <Link className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href="#">Privacidade</Link>
+          <a className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href={webUrl}>WhatsApp Suporte</a>
+          <a className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href={webUrl}>Termos de Uso</a>
+          <a className="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4" href={webUrl}>Privacidade</a>
         </div>
         <div className="flex gap-4">
-          <span className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all cursor-pointer">
+          <a href={webUrl} className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all cursor-pointer">
             <span className="material-symbols-outlined text-sm">public</span>
-          </span>
-          <span className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all cursor-pointer">
+          </a>
+          <a href={webUrl} className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all cursor-pointer">
             <span className="material-symbols-outlined text-sm">share</span>
-          </span>
+          </a>
         </div>
       </footer>
     </>
