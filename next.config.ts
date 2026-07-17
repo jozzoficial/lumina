@@ -2,9 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // Se for usar o GitHub Pages com o nome do repositório (ex: /lumina-landingpage),
-  // remova o comentário da linha abaixo e ajuste o nome do repositório:
-  // basePath: "/lumina-landingpage",
+  // Configuração automática para o novo nome do seu repositório:
+  basePath: "/lumina",
   images: {
     unoptimized: true, // Necessário para exportação estática
   },
