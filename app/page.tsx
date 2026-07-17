@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 
 export default function Home() {
   // Coloque aqui o link do GitHub Releases (ou outro) e o link da sua Web App
-  const apkUrl = "https://github.com/SeuUser/lumina-app/releases/download/v1.0.0/lumina.apk";
-  const webUrl = "https://sua-webapp-lumina.com";
+  const apkUrl = "https://github.com/jozzoficial/lumina-landingpage/releases/download/v1.0.0/lumina_app.1.0.0.apk";
+  const webUrl = "https://lumina-app-taket.web.app";
 
   return (
     <>
